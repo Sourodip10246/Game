@@ -68,10 +68,10 @@ function handleClick(id) {
         winSound.play();
         if (winner === "X") {
             falcon++;
-            document.getElementById('result').innerHTML = "Falcons Win!";
+            document.getElementById('result').innerHTML = "Falcon Win!";
         } else {
             worrior++;
-            document.getElementById('result').innerHTML = "Warriors Win!";
+            document.getElementById('result').innerHTML = "Warrior Win!";
         }
     } else if (isAllSelected) {
         gameOver = true;
