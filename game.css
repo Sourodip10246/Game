@@ -1,0 +1,152 @@
+* {
+    box-sizing: border-box;
+    color: white;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    background-color: black;
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    width: 320px;
+    height: 320px;
+    border: 2px solid #0ff; /* Neon Cyan */
+    background-color: #0ff;
+    padding: 8px;
+    margin: 0;
+    box-shadow: 0 0 10px #0ff, 0 0 20px #00ffff; /* Neon glow */
+}
+
+.cell {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #0ff; /* Neon Cyan */
+    font-size: 2rem;
+    cursor: pointer;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #0ff; /* Neon Text */
+    text-shadow: 0 0 5px #0ff, 0 0 10px #00ffff, 0 0 20px #00ffff;
+    background-color: black; /* To make the glow stand out */
+    transition: 0.3s ease-in-out;
+}
+
+.cell:hover {
+    background-color: #002244; /* Slight glow effect on hover */
+    box-shadow: 0 0 10px #0ff, 0 0 20px #00ffff;
+}
+
+
+#result {
+    color: #0f0; /* Neon Green */
+    font-family: "Franklin Gothic Heavy", sans-serif;
+    font-size: 30px;
+    font-weight: bolder;
+    text-shadow: 0 0 5px #0f0, 0 0 10px #0f0, 0 0 20px #0f0, 0 0 40px #0f0;
+    animation: blink 1s infinite alternate;
+}
+
+@keyframes blink {
+    0% { opacity: 1; text-shadow: 0 0 10px #0f0, 0 0 20px #0f0, 0 0 40px #0f0; }
+    50% { opacity: 0.6; text-shadow: 0 0 5px #0f0, 0 0 10px #0f0, 0 0 20px #0f0; }
+    100% { opacity: 1; text-shadow: 0 0 10px #0f0, 0 0 20px #0f0, 0 0 40px #0f0; }
+}
+
+
+.round {
+    font-family: 'Courier New', Courier, monospace;
+    color: #0ff; /* Neon cyan */
+    text-shadow: 0 0 5px #0ff, 0 0 10px #0ff, 0 0 20px #00ffff, 0 0 40px #00ffff;
+    font-weight: bold;
+}
+
+.scoreContainer{
+    display: flex;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+}
+
+.scoreCard{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+    gap: 20%;
+}
+
+.scoreCard div {
+    font-size: 50px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+
+.falcoWin {
+    color: #00c3ff; /* Neon blue for Falcon */
+    text-shadow: 0 0 5px #00c3ff, 0 0 10px #00c3ff, 0 0 20px #00c3ff, 0 0 40px #00c3ff;
+}
+
+.draw {
+    color: #ffffff; /* Neutral white for Draw */
+    text-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 20px #cccccc, 0 0 40px #cccccc;
+}
+
+.worrWin {
+    color: #ff4500; /* Neon orange-red for Warrior */
+    text-shadow: 0 0 5px #ff4500, 0 0 10px #ff4500, 0 0 20px #ff6347, 0 0 40px #ff6347;
+}
+
+
+
+img{
+    width: 80px;
+    border-radius: 30px;
+}
+
+#falcons {
+    filter: drop-shadow(0 0 10px #00c3ff) drop-shadow(0 0 20px #00c3ff) drop-shadow(0 0 40px #00c3ff);
+}
+
+#worriors {
+    filter: drop-shadow(0 0 10px #ff4500) drop-shadow(0 0 20px #ff4500) drop-shadow(0 0 40px #ff4500);
+}
+
+
+.playAgain {
+    background-color: black; /* Dark background to enhance neon glow */
+    font-size: 25px;
+    font-family: 'Courier New', Courier, monospace;
+    padding: 20px;
+    border-radius: 25px;
+    color: #0ff; /* Neon Cyan Text */
+    font-weight: bold;
+    border: 2px solid #0ff; /* Neon Border */
+    text-shadow: 0 0 5px #0ff, 0 0 10px #00ffff, 0 0 20px #00ffff;
+    box-shadow: 0 0 10px #0ff, 0 0 20px #00ffff, 0 0 40px #00ffff;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.playAgain:hover {
+    background-color: #002244; /* Slightly darken effect on hover */
+    box-shadow: 0 0 20px #0ff, 0 0 30px #00ffff, 0 0 50px #00ffff;
+    border-color: #00ffff;
+}
+
+.turns {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 24px;
+    color: #0ff; /* Neon cyan */
+    text-shadow: 0 0 5px #0ff, 0 0 10px #0ff, 0 0 20px #00ffff, 0 0 40px #00ffff;
+    font-weight: bold;
+}
