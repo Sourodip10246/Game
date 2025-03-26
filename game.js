@@ -34,7 +34,7 @@ function resetGame() {
 
     document.querySelectorAll('.cell').forEach(cell => {
         cell.innerHTML = "";
-        cell.style.backgroundColor = "black"; // Reset background color
+        cell.style.removeProperty("background-color");
         cell.style.color = "#0ff"; // Reset text color
         cell.style.border = "1px solid #0ff"; // Reset border
         cell.style.textShadow = "0 0 5px #0ff, 0 0 10px #00ffff, 0 0 20px #00ffff"; // Reset neon effect
